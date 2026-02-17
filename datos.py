@@ -1,8 +1,7 @@
 from Dino import Dino
 from datetime import datetime
 def getDatos(n:int) -> list[Dino]:
-
-     return [
+     matrizDinos = [
           [
                Dino(1, "Tyrannosaurus Rex", ["mordida poderosa", "gran olfato"], 4.0, 8000.0, True, False, False, datetime(1905, 1, 1), datetime(1990, 6, 15)),
                Dino(2, "Velociraptor", ["velocidad", "inteligencia"], 1.8, 15.0, True, False, False, datetime(1924, 1, 1), datetime(1980, 5, 10)),
@@ -40,6 +39,11 @@ def getDatos(n:int) -> list[Dino]:
                Dino(30, "Erlikosaurus", ["pico fuerte", "movilidad ágil"], 3.4, 2000.0, False, False, True, datetime(1980, 1, 1), datetime(1992, 6, 6))
           ]
           ]
+     listaDinos = []
+     for dino in matrizDinos[n]:
+          listaDinos.append(dino)
+     return listaDinos
+      
 
 
 

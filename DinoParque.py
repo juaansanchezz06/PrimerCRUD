@@ -20,7 +20,7 @@ class HabitadDino:
     def añadirDino(self, Dino: Dino) -> None:
         self.DinosHabitantes.append(Dino)
 
-    def eliminarDinobyID(self, idDino: str) -> bool:
+    def eliminarDinobyID(self, idDino: int) -> bool:
         for Dino in self.DinosHabitantes:
             if Dino.idDino == idDino:
                 self.DinosHabitantes.remove(Dino)
