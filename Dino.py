@@ -43,19 +43,3 @@ class   Dino:
            f"Título: {self.fechaDescripcion}\n"
            f"Título: {self.fechaEsqueletoCompleto}\n"
        )
-
-    
-if __name__ == "__main__": 
-    dino1 = Dino(
-        idDino=1,
-        nombre="Tyrannosaurus rex",
-        habilidades=["Caza en solitario", "Mordida potente", "Olfato agudo"],
-        alturaMedia=4.0,           
-        pesoMedio=8000.0,          
-        esCarnivoro=True,
-        esHerbivoro=False,
-        esOmnivoro=False,
-        FechaDescripcion=datetime(1905, 1, 1),
-        FechaEsqueletoCompleto=datetime(1990, 8, 12)
-    )
-    print(dino1)
