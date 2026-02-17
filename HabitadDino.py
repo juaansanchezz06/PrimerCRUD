@@ -26,3 +26,16 @@ class HabitadDino:
                 self.DinosHabitantes.remove(Dino)
                 return True
         return False
+    
+    def pesoLunar():
+        pass    
+    def cambioDieta():
+        pass
+    def masGordo():
+        pass
+    def masDelgado():
+        pass
+    def PrimerDescubierto():
+        pass
+    def PrimerEsqueletoCompleto():
+        pass

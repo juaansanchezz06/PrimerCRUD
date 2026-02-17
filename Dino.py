@@ -5,8 +5,8 @@ class   Dino:
         idDino: int,
         nombre: str,
         habilidades: list[str],
-        alturaMedia: float,
-        pesoMedio:float,
+        altura: float,
+        peso:float,
         esCarnivoro: bool,
         esHerbivoro: bool,
         esOmnivoro: bool,
@@ -16,8 +16,8 @@ class   Dino:
         self.idDino = idDino
         self.nombre = nombre
         self.habilidades = habilidades
-        self.alturaMedia = alturaMedia
-        self.pesoMedio = pesoMedio
+        self.altura = altura
+        self.peso = peso
         self.esCarnivoro = esCarnivoro
         self.esHerbivoro = esHerbivoro
         self.esOmnivoro = esOmnivoro
@@ -29,7 +29,21 @@ class   Dino:
             return self.idDino == other.idDino
         return False
     
-    
+    def __lt__(self, other) -> bool:
+       return self.peso < other.peso
+
+
+    def __le__(self, other) -> bool:
+       return self.peso <= other.peso
+
+
+    def __gt__(self, other) -> bool:
+       return self.peso > other.peso
+
+
+    def __ge__(self, other) -> bool:
+       return self.peso >= other.peso
+
     def __str__(self):
        return (
            f"Título: {self.idDino}\n"
