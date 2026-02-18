@@ -1,21 +1,22 @@
 from Dino import Dino
 
-class HabitadDino:
+class DinoParque:
     def __init__(
         self,
-        idHabitadDino: int,
-        nombreHabitad: str,
+        idDinoParque: int,
+        nombreDinoParque: str,
         DinosHabitantes: list[Dino] | None = None
     ):
-        self.idHabitadDino = idHabitadDino
-        self.nombreHabitad = nombreHabitad
+        self.idDinoParque = idDinoParque
+        self.nombreDinoParque = nombreDinoParque
         self.DinosHabitantes = DinosHabitantes
 
         if DinosHabitantes is None:
             self.DinosHabitantes: list[Dino] = []
         else:
             self.DinosHabitantes = DinosHabitantes
-
+    def __hash__(self):
+        return self.idDinoParque        
     
     def añadirDino(self, Dino: Dino) -> None:
         self.DinosHabitantes.append(Dino)
@@ -27,8 +28,9 @@ class HabitadDino:
                 return True
         return False
     
-    def pesoLunar():
-        pass    
+    def pesoLunar(self):
+
+        pass
     def cambioDieta():
         pass
     def masGordo():
@@ -39,3 +41,12 @@ class HabitadDino:
         pass
     def PrimerEsqueletoCompleto():
         pass
+
+    def __str__(self) -> str:
+        res = f"DinoParque #{self.idDinoParque}\n"
+        res += f"Nombre: {self.nombreDinoParque}\n"
+        res += "Dinos en dinoparque:\n"
+        for dino in self.DinosHabitantes:
+            res += f"#{dino.idDino} -- {dino.nombre}\n" 
+        return res  
+    

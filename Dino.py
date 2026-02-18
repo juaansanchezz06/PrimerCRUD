@@ -32,6 +32,8 @@ class   Dino:
     def __lt__(self, other) -> bool:
        return self.peso < other.peso
 
+    def __hash__(self):
+        return self.idDino
 
     def __le__(self, other) -> bool:
        return self.peso <= other.peso
@@ -46,14 +48,14 @@ class   Dino:
 
     def __str__(self):
        return (
-           f"Título: {self.idDino}\n"
-           f"Título: {self.nombre}\n"
-           f"Título: {self.habilidades}\n"
-           f"Título: {self.altura}\n"
-           f"Título: {self.peso}\n"
-           f"Título: {self.esCarnivoro}\n"
-           f"Título: {self.esHerbivoro}\n"
-           f"Título: {self.esOmnivoro}\n"
-           f"Título: {self.fechaDescripcion}\n"
-           f"Título: {self.fechaEsqueletoCompleto}\n"
+           f"ID: {self.idDino}\n"
+           f"Nombre: {self.nombre}\n"
+           f"Habilidades: {self.habilidades}\n"
+           f"Altura: {self.altura} m\n"
+           f"Peso: {self.peso} N\n"
+           f"Es Carnivoro: {self.esCarnivoro}\n"
+           f"Es Herbivoro: {self.esHerbivoro}\n"
+           f"Es Omnivoro: {self.esOmnivoro}\n"
+           f"Fecha de descubrimiento: {self.fechaDescripcion}\n"
+           f"Fecha en la que se completo su esqueleto: {self.fechaEsqueletoCompleto}\n"
        )
