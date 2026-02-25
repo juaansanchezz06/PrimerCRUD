@@ -18,8 +18,8 @@ class DinoParque:
     def __hash__(self):
         return self.idDinoParque        
     
-    def añadirDino(self, Dino: Dino) -> None:
-        self.DinosHabitantes.append(Dino)
+    def añadirDino(self, dino: Dino) -> None:
+        self.DinosHabitantes.append(dino)
 
     def eliminarDinobyID(self, idDino: int) -> bool:
         for Dino in self.DinosHabitantes:
@@ -28,18 +28,20 @@ class DinoParque:
                 return True
         return False
     
-    def pesoLunar(self):
-
-        pass
-    def cambioDieta():
-        pass
+    def vaciarParque(self):
+        return self.DinosHabitantes.clear()
+    def alimentarDino(self , idDino: int ,cantidad: int)-> None:
+        alimento = cantidad * 100
+        for Dino in self.DinosHabitantes:
+            if Dino.idDino == idDino:
+                Dino.peso += alimento
     def masGordo():
         pass
     def masDelgado():
         pass
     def PrimerDescubierto():
         pass
-    def PrimerEsqueletoCompleto():
+    def ultimoDescubierto():
         pass
 
     def __str__(self) -> str:
@@ -47,6 +49,6 @@ class DinoParque:
         res += f"Nombre: {self.nombreDinoParque}\n"
         res += "Dinos en dinoparque:\n"
         for dino in self.DinosHabitantes:
-            res += f"#{dino.idDino} -- {dino.nombre}\n" 
+            res += f"#{dino.idDino} -- {dino.nombre} -- ({dino.peso}kg)\n" 
         return res  
     
