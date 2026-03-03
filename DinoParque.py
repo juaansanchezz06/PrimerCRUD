@@ -35,14 +35,26 @@ class DinoParque:
         for Dino in self.DinosHabitantes:
             if Dino.idDino == idDino:
                 Dino.peso += alimento
-    def masGordo():
-        pass
-    def masDelgado():
-        pass
-    def PrimerDescubierto():
-        pass
-    def ultimoDescubierto():
-        pass
+
+    def masGordo(self) -> Dino | None:
+        if not self.DinosHabitantes:
+            return None
+        return max(self.DinosHabitantes, key=lambda d: d.peso)
+
+    def masDelgado(self) -> Dino | None:
+        if not self.DinosHabitantes:
+            return None
+        return min(self.DinosHabitantes, key=lambda d: d.peso)
+
+    def PrimerDescubierto(self) -> Dino | None:
+        if not self.DinosHabitantes:
+            return None
+        return min(self.DinosHabitantes, key=lambda d: d.fechaDescripcion)
+
+    def ultimoDescubierto(self) -> Dino | None:
+        if not self.DinosHabitantes:
+            return None
+        return max(self.DinosHabitantes, key=lambda d: d.fechaDescripcion)
 
     def __str__(self) -> str:
         res = f"DinoParque #{self.idDinoParque}\n"
